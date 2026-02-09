@@ -6,10 +6,77 @@
     <title>Wesoły Zakątek - Park Trampolin i Małpi Gaj Warszawa</title>
     <meta name="description" content="Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla dzieci.">
     <meta name="keywords" content="park trampolin, małpi gaj, dzieci, Warszawa, trampoliny, wspinaczka, dmuchańce, urodziny, zabawa">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://maps.googleapis.com;">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wesoly-zakatek.pl">
+    <meta property="og:title" content="Wesoły Zakątek - Park Trampolin i Małpi Gaj Warszawa">
+    <meta property="og:description" content="Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla dzieci.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=630&fit=crop">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Wesoły Zakątek">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wesoly-zakatek.pl">
+    <meta property="twitter:title" content="Wesoły Zakątek - Park Trampolin i Małpi Gaj Warszawa">
+    <meta property="twitter:description" content="Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla dzieci.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=630&fit=crop">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="manifest" href="manifest.json">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Wesoły Zakątek - Park Trampolin",
+        "description": "Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla dzieci.",
+        "url": "https://wesoly-zakatek.pl",
+        "telephone": "+48 123 456 789",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Przykład 123",
+            "addressLocality": "Warszawa",
+            "postalCode": "00-001",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 52.2297,
+            "longitude": 21.0122
+        },
+        "openingHours": [
+            "Mo-Fr 10:00-20:00",
+            "Sa-Su 09:00-21:00"
+        ],
+        "priceRange": "$$",
+        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=630&fit=crop",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127"
+        },
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Park Trampolin",
+                "value": "500m²"
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Małpi Gaj",
+                "value": "Kompleks wspinaczkowy"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Page Loader -->
@@ -126,17 +193,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-toggle" aria-label="Przełącz menu nawigacyjne" role="button" tabindex="0">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" role="banner">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -177,7 +244,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" role="region" aria-labelledby="about-title">
         <div class="container">
             <div class="section-header">
                 <h2>Dlaczego Wesoły Zakątek?</h2>
@@ -217,7 +284,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services" role="region" aria-labelledby="services-title">
         <div class="container">
             <div class="section-header">
                 <h2>Nasze Atrakcje</h2>
@@ -226,7 +293,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Dzieci skaczące na trampolinach">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Dzieci skaczące na trampolinach" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Park Trampolin</h3>
@@ -239,7 +306,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1544378730-6f3c834d9b2d?w=400&h=250&fit=crop" alt="Dzieci bawiące się w małpim gaju">
+                        <img src="https://images.unsplash.com/photo-1544378730-6f3c834d9b2d?w=400&h=250&fit=crop" alt="Dzieci bawiące się w małpim gaju" loading="lazy">
                     </div>
                     <div class="service-content">
                         <h3>Małpi Gaj</h3>
@@ -255,7 +322,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
+    <section id="pricing" class="pricing" role="region" aria-labelledby="pricing-title">
         <div class="container">
             <div class="section-header">
                 <h2>Cennik</h2>
@@ -315,7 +382,7 @@
     </section>
 
     <!-- AI Chatbot Section -->
-    <section id="faq" class="ai-chatbot">
+    <section id="faq" class="ai-chatbot" role="region" aria-labelledby="faq-title">
         <div class="container">
             <div class="chatbot-container">
                 <div class="chatbot-header">
@@ -352,7 +419,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
         <div class="container">
             <div class="section-header">
                 <h2>Skontaktuj się z nami</h2>
@@ -401,25 +468,25 @@
                 </div>
                 <div class="contact-form">
                     <h3>Wyślij wiadomość</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" role="form" aria-labelledby="contact-title">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Imię i nazwisko</label>
-                                <input type="text" id="name" placeholder="Twoje imię i nazwisko" required>
+                                <input type="text" id="name" placeholder="Twoje imię i nazwisko" required aria-describedby="name-help">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="Twój adres email" required>
+                                <input type="email" id="email" placeholder="Twój adres email" required aria-describedby="email-help">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message">Wiadomość</label>
-                            <textarea id="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
+                            <textarea id="message" placeholder="Twoja wiadomość" rows="5" required aria-describedby="message-help"></textarea>
                         </div>
                         <div class="form-buttons">
-                            <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
-                            <button type="button" id="whatsappBtn" class="btn btn-whatsapp">
-                                <i class="fab fa-whatsapp"></i> Wyślij przez WhatsApp
+                            <button type="submit" class="btn btn-primary" aria-describedby="submit-help">Wyślij wiadomość</button>
+                            <button type="button" id="whatsappBtn" class="btn btn-whatsapp" aria-describedby="whatsapp-help">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Wyślij przez WhatsApp
                             </button>
                         </div>
                     </form>
@@ -429,7 +496,7 @@
     </section>
 
     <!-- Google Maps Section -->
-    <section id="location" class="location">
+    <section id="location" class="location" role="region" aria-labelledby="location-title">
         <div class="container">
             <div class="section-header">
                 <h2>Znajdź nas na mapie</h2>
@@ -471,7 +538,7 @@
     </section>
 
     <!-- Floating Contact Buttons -->
-    <section id="comments" class="comments">
+    <section id="comments" class="comments" role="region" aria-labelledby="comments-title">
         <div class="container">
             <div class="section-header">
                 <h2>Opinie naszych klientów</h2>
@@ -675,7 +742,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
+    <section id="gallery" class="gallery" role="region" aria-labelledby="gallery-title">
         <div class="container">
             <div class="section-header">
                 <h2>Galeria Zdjęć</h2>
@@ -775,6 +842,15 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 
     <script src="script.js"></script>
 </body>

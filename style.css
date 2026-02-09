@@ -916,8 +916,6 @@ body::after {
     min-width: 44px;
     min-height: 44px;
     justify-content: center;
-    background: rgba(255, 0, 0, 0.5); /* Temporary debug background */
-    border: 2px solid red; /* Temporary debug border */
 }
 
 .nav-toggle:hover {

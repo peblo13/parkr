@@ -143,11 +143,8 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
 if (navToggle && navMenu) {
-    console.log('Nav toggle and menu found');
-    
     // Use touchstart for better mobile support
     navToggle.addEventListener('touchstart', (e) => {
-        console.log('Touchstart event triggered');
         e.preventDefault();
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
@@ -155,7 +152,6 @@ if (navToggle && navMenu) {
     
     // Also keep click for desktop
     navToggle.addEventListener('click', (e) => {
-        console.log('Click event triggered');
         e.preventDefault();
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
@@ -163,7 +159,20 @@ if (navToggle && navMenu) {
     
     // Add mousedown for better compatibility
     navToggle.addEventListener('mousedown', (e) => {
-        console.log('Mousedown event triggered');
+        e.preventDefault();
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+}
+
+// Desktop dropdown toggle
+const moreLink = document.querySelector('.more-link');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+if (moreLink && dropdownMenu) {
+    // Use touchstart for mobile, click for desktop
+    const eventType = 'ontouchstart' in window ? 'touchstart' : 'click';
+    moreLink.addEventListener(eventType, (e) => {
         e.preventDefault();
         moreLink.classList.toggle('active');
         dropdownMenu.classList.toggle('active');
