@@ -3,1302 +3,779 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futurystyczna Sala Zabaw dla Dzieci - Wesoły Zakątek</title>
-    <meta name="description" content="Najnowocześniejsza sala zabaw dla dzieci w Warszawie. VR, AR, edukacyjne gry i bezpieczne środowisko. Odkryj przyszłość rozrywki dla dzieci!">
-    <meta name="keywords" content="sala zabaw, dzieci, VR, AR, Warszawa, edukacja, rozrywka, Wesoły Zakątek">
-    <meta name="author" content="Wesoły Zakątek">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Futurystyczna Sala Zabaw dla Dzieci - Wesoły Zakątek">
-    <meta property="og:description" content="Najnowocześniejsza sala zabaw dla dzieci z VR i AR. Bezpieczna, edukacyjna rozrywka dla najmłodszych.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
-    <meta property="og:url" content="https://wesolyzakatek.pl">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Futurystyczna Sala Zabaw dla Dzieci - Wesoły Zakątek">
-    <meta name="twitter:description" content="Najnowocześniejsza sala zabaw dla dzieci z VR i AR. Bezpieczna, edukacyjna rozrywka dla najmłodszych.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
-    <link rel="canonical" href="https://wesolyzakatek.pl">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="manifest.json">
+    <title>Wesoły Zakątek - Park Trampolin i Małpi Gaj Warszawa</title>
+    <meta name="description" content="Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla dzieci.">
+    <meta name="keywords" content="park trampolin, małpi gaj, dzieci, Warszawa, trampoliny, wspinaczka, dmuchańce, urodziny, zabawa">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Wesoły Zakątek",
-        "description": "Najnowocześniejsza sala zabaw dla dzieci z technologią VR i AR",
-        "url": "https://wesolyzakatek.pl",
-        "telephone": "+48-123-456-789",
-        "email": "kontakt@wesolyzakatek.pl",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "ul. Przyszłości 42",
-            "addressLocality": "Warszawa",
-            "postalCode": "00-001",
-            "addressCountry": "PL"
-        },
-        "openingHours": [
-            "Mo-Fr 09:00-18:00",
-            "Sa-Su 10:00-20:00"
-        ],
-        "priceRange": "$$",
-        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "150"
-        },
-        "serviceType": ["Sala zabaw", "Zajęcia edukacyjne", "Imprezy urodzinowe"]
-    }
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1><img src="logopz.png" alt="Logo Wesoły Zakątek"> Wesoły Zakątek</h1>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul id="navMenu">
-                <li><a href="#about">O Nas</a></li>
-                <li><a href="#why-us">Dlaczego My</a></li>
-                <li><a href="#services">Usługi</a></li>
-                <li><a href="#pricing">Cennik</a></li>
-                <li><a href="#gallery">Galeria</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li class="dropdown">
-                    <a href="#more" class="dropdown-toggle">Więcej <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#reviews">Recenzje</a></li>
-                        <li><a href="#schedule">Harmonogram</a></li>
-                        <li><a href="#promotions">Promocje</a></li>
-                        <li><a href="#location">Lokalizacja</a></li>
-                    </ul>
-                </li>
-            </ul>
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-container">
+            <div class="loader-logo">
+                <img src="logopz.png" alt="Wesoły Zakątek" class="loader-logo-img">
+            </div>
+            <div class="loader-content">
+                <div class="loader-circle">
+                    <svg class="progress-ring" width="120" height="120">
+                        <circle class="progress-ring-circle-bg" stroke="#333" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"/>
+                        <circle class="progress-ring-circle" stroke="url(#gradient)" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"
+                                style="stroke-dasharray: 327; stroke-dashoffset: 327;"/>
+                    </svg>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8a2be2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </div>
+                <div class="loader-text">
+                    <div class="loader-percentage">0%</div>
+                    <div class="loader-status">Ładowanie...</div>
+                </div>
+            </div>
+            <div class="loader-particles">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+                <div class="particle particle-7"></div>
+                <div class="particle particle-8"></div>
+                <div class="particle particle-9"></div>
+                <div class="particle particle-10"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>
+                        <img src="logopz.png" alt="Logo Wesoły Zakątek" class="logo-img">
+                        Wesoły Zakątek
+                    </h1>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Start</span>
+                    </a>
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>O Nas</span>
+                    </a>
+                    <a href="#services" class="nav-link">
+                        <i class="fas fa-concierge-bell"></i>
+                        <span>Usługi</span>
+                    </a>
+                    <a href="#pricing" class="nav-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Cennik</span>
+                    </a>
+                    <a href="#gallery" class="nav-link">
+                        <i class="fas fa-images"></i>
+                        <span>Galeria</span>
+                    </a>
+                    <a href="#location" class="nav-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lokalizacja</span>
+                    </a>
+                    <a href="#faq" class="nav-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <a href="#comments" class="nav-link">
+                        <i class="fas fa-comments"></i>
+                        <span>Opinie</span>
+                    </a>
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Kontakt</span>
+                    </a>
+                    <div class="nav-more">
+                        <a href="#" class="nav-link more-link">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <span>Więcej</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#gallery" class="dropdown-item">
+                                <i class="fas fa-images"></i>
+                                <span>Galeria</span>
+                            </a>
+                            <a href="#location" class="dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Lokalizacja</span>
+                            </a>
+                            <a href="#faq" class="dropdown-item">
+                                <i class="fas fa-question-circle"></i>
+                                <span>FAQ</span>
+                            </a>
+                            <a href="#comments" class="dropdown-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Opinie</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
     </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Wesoły Zakątek - <span class="highlight">Park Trampolin</span> i Małpi Gaj
+                </h1>
+                <p class="hero-subtitle">
+                    Największy park trampolin w Warszawie z olbrzymim małpim gajem! Strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla całej rodziny
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Umów Wizytę</a>
+                    <a href="#services" class="btn btn-secondary">Zobacz Usługi</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-container">
+                    <img src="parkr.png" alt="Dzieci bawiące się na trampolinach w parku rozrywki">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">2000+</div>
+                <div class="stat-label">Zadowolonych Dzieci</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1000</div>
+                <div class="stat-label">m² Powierzchni</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Bezpieczeństwo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section id="about" class="about">
-        <h3 class="animate-text">O Nas</h3>
-        <div class="about-content">
-            <div class="about-item">
-                <i class="fas fa-robot"></i>
-                <p class="animate-text">Jesteśmy liderem w branży rozrywka/kultura, oferując niezapomniane doświadczenia dla dzieci. Nasza sala zabaw łączy technologię przyszłości z tradycyjną zabawą, tworząc magiczne miejsce dla najmłodszych.</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Dlaczego Wesoły Zakątek?</h2>
+                <p>Największy park trampolin i małpi gaj w hali w Warszawie</p>
             </div>
-            <div class="about-item">
-                <i class="fas fa-vr-cardboard"></i>
-                <p class="animate-text">W Wesołym Zakątku wierzymy, że zabawa to klucz do rozwoju dziecka. Nasze futurystyczne przestrzenie są zaprojektowane, aby inspirować kreatywność, uczyć poprzez zabawę i budować wspomnienia na całe życie. Z wykorzystaniem najnowszych technologii VR, AR i interaktywnych instalacji, zapewniamy bezpieczne i edukacyjne środowisko, gdzie dzieci mogą eksplorować, odkrywać i rozwijać swoje umiejętności.</p>
-            </div>
-            <div class="about-item">
-                <i class="fas fa-shield-alt"></i>
-                <p class="animate-text">Nasza misja to stworzyć miejsce, gdzie rodzice mogą być spokojni, wiedząc, że ich dzieci spędzają czas w sposób produktywny i bezpieczny. Dołącz do tysięcy zadowolonych rodzin, które już wybrały Wesoły Zakątek jako swoje ulubione miejsce rozrywki!</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-us" class="why-us">
-        <h3 class="animate-text">Dlaczego Wesoły Zakątek?</h3>
-        <ul>
-            <li class="animate-text why-us-item-1"><i class="fas fa-vr-cardboard"></i><strong>Innowacyjne Technologie:</strong> Wykorzystujemy VR, AR i AI, aby stworzyć unikalne doświadczenia, niedostępne w tradycyjnych salach zabaw.</li>
-            <li class="animate-text why-us-item-2"><i class="fas fa-shield-alt"></i><strong>Bezpieczeństwo na Pierwszym Miejscu:</strong> Wszystkie nasze atrakcje są certyfikowane i nadzorowane przez wykwalifikowany personel, zapewniając maksymalne bezpieczeństwo.</li>
-            <li class="animate-text why-us-item-3"><i class="fas fa-brain"></i><strong>Edukacja i Zabawa:</strong> Łączymy rozrywkę z nauką, pomagając dzieciom rozwijać umiejętności krytycznego myślenia, kreatywności i współpracy.</li>
-            <li class="animate-text why-us-item-4"><i class="fas fa-users"></i><strong>Przyjazne dla Rodziców:</strong> Oferujemy wygodne strefy relaksu dla rodziców, kawę i Wi-Fi, aby czas oczekiwania był przyjemny.</li>
-            <li class="animate-text why-us-item-5"><i class="fas fa-trophy"></i><strong>Nagrody i Certyfikaty:</strong> Nasze programy są nagradzane za innowacyjność i wpływ na rozwój dzieci.</li>
-        </ul>
-        <p class="animate-text">Doświadcz przyszłości zabawy już dziś! Zarezerwuj wizytę i zobacz, dlaczego Wesoły Zakątek jest najlepszym wyborem dla Twojej rodziny.</p>
-    </section>
-
-    <section id="reviews" class="reviews">
-        <h3 class="animate-text">Recenzje</h3>
-        <div class="reviews-intro">
-            <p>Opinie naszych klientów z Google i Facebook</p>
-        </div>
-        <div class="reviews-tabs">
-            <button class="review-tab active" data-tab="google">Google Reviews</button>
-            <button class="review-tab" data-tab="facebook">Facebook Reviews</button>
-        </div>
-        
-        <div id="google-reviews" class="reviews-content active">
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" alt="Anna K.">
-                        </div>
-                        <div class="review-info">
-                            <h5>Anna Kowalska</h5>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="review-platform">
-                            <i class="fab fa-google"></i>
-                        </div>
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-bounce"></i>
                     </div>
-                    <p class="review-text">"Najlepsza sala zabaw dla dzieci! Moje dziecko jest zachwycone technologią VR. Personel bardzo profesjonalny i troskliwy."</p>
-                    <div class="review-date">2 tygodnie temu</div>
+                    <h3>Park Trampolin 500m²</h3>
+                    <p>Ogromny park trampolin z konstrukcjami do zabaw akrobatycznych, foam pit i strefami do skakania dla dzieci w każdym wieku.</p>
                 </div>
-                
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" alt="Marek Z.">
-                        </div>
-                        <div class="review-info">
-                            <h5>Marek Zieliński</h5>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="review-platform">
-                            <i class="fab fa-google"></i>
-                        </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-tree"></i>
                     </div>
-                    <p class="review-text">"Rewelacyjne miejsce! Warsztaty programowania dla dzieci są fantastycznie zorganizowane. Moja córka nie może się doczekać kolejnych zajęć."</p>
-                    <div class="review-date">3 tygodnie temu</div>
+                    <h3>Małpi Gaj</h3>
+                    <p>Olbrzymi kompleks przeszkód, lin i platform do wspinania. Przygoda i zabawa dla małych małp w bezpiecznym środowisku.</p>
                 </div>
-                
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" alt="Ewa M.">
-                        </div>
-                        <div class="review-info">
-                            <h5>Ewa Malinowska</h5>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="review-platform">
-                            <i class="fab fa-google"></i>
-                        </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-birthday-cake"></i>
                     </div>
-                    <p class="review-text">"Urodziny syna były niesamowite! Dekoracje, animacje, wszystko na najwyższym poziomie. Polecam wszystkim rodzicom!"</p>
-                    <div class="review-date">1 miesiąc temu</div>
+                    <h3>Urodziny dla Dzieci</h3>
+                    <p>Organizujemy niezapomniane urodziny z tortem gratis i pakietami urodzinowymi w parku trampolin.</p>
                 </div>
-            </div>
-        </div>
-        
-        <div id="facebook-reviews" class="reviews-content">
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" alt="Piotr W.">
-                        </div>
-                        <div class="review-info">
-                            <h5>Piotr Wojciechowski</h5>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="review-platform">
-                            <i class="fab fa-facebook-f"></i>
-                        </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <p class="review-text">"Przyszliśmy na dzień otwarty i byliśmy zachwyceni! Gry VR są bezpieczne i edukacyjne. Czekamy na otwarcie z niecierpliwością."</p>
-                    <div class="review-date">2 miesiące temu</div>
-                </div>
-                
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" alt="Katarzyna L.">
-                        </div>
-                        <div class="review-info">
-                            <h5>Katarzyna Lewandowska</h5>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="review-platform">
-                            <i class="fab fa-facebook-f"></i>
-                        </div>
-                    </div>
-                    <p class="review-text">"Świetne miejsce dla dzieci! Moje bliźniaki spędziły tu całe popołudnie i były wniebowzięte. Personel bardzo pomocny."</p>
-                    <div class="review-date">6 tygodni temu</div>
-                </div>
-                
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" alt="Tomasz K.">
-                        </div>
-                        <div class="review-info">
-                            <h5>Tomasz Kowalewski</h5>
-                            <div class="review-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="review-platform">
-                            <i class="fab fa-facebook-f"></i>
-                        </div>
-                    </div>
-                    <p class="review-text">"Organizacja urodzin na najwyższym poziomie! Wszystko było dopięte na ostatni guzik. Dzieci były zachwycone, rodzice też."</p>
-                    <div class="review-date">2 miesiące temu</div>
+                    <h3>Rodzice na Pierwszym Miejscu</h3>
+                    <p>Oferujemy wygodne strefy relaksu dla rodziców z kawą, Wi-Fi i monitoringiem na żywo parku trampolin.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="schedule" class="schedule">
-        <h3 class="animate-text">Harmonogram Zajęć</h3>
-        <div class="schedule-intro">
-            <p>Sprawdź nasze regularne zajęcia i warsztaty dla dzieci</p>
-        </div>
-        
-        <div class="schedule-container">
-            <div class="schedule-days">
-                <button class="schedule-day active" data-day="monday">Poniedziałek</button>
-                <button class="schedule-day" data-day="tuesday">Wtorek</button>
-                <button class="schedule-day" data-day="wednesday">Środa</button>
-                <button class="schedule-day" data-day="thursday">Czwartek</button>
-                <button class="schedule-day" data-day="friday">Piątek</button>
-                <button class="schedule-day" data-day="weekend">Weekend</button>
-            </div>
-            
-            <div id="monday-schedule" class="schedule-content active">
-                <div class="schedule-item">
-                    <div class="schedule-time">9:00 - 10:30</div>
-                    <div class="schedule-details">
-                        <h4>Warsztaty Programowania dla Maluchów</h4>
-                        <p>Wprowadzenie do świata kodowania przez zabawę z klockami i aplikacjami edukacyjnymi. Dla dzieci 4-6 lat.</p>
-                        <span class="schedule-age">4-6 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">11:00 - 12:30</div>
-                    <div class="schedule-details">
-                        <h4>Gry VR - Przygody Kosmiczne</h4>
-                        <p>Odkrywanie wszechświata w wirtualnej rzeczywistości. Nauka astronomii przez interaktywne gry.</p>
-                        <span class="schedule-age">6-10 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">14:00 - 15:30</div>
-                    <div class="schedule-details">
-                        <h4>Strefa Edukacyjna - Matematyka</h4>
-                        <p>Zabawne lekcje matematyki z wykorzystaniem technologii AR i interaktywnych ćwiczeń.</p>
-                        <span class="schedule-age">5-8 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">16:00 - 17:30</div>
-                    <div class="schedule-details">
-                        <h4>Twórcze Warsztaty</h4>
-                        <p>Rysowanie, malowanie i tworzenie cyfrowe z wykorzystaniem tabletów graficznych i aplikacji kreatywnych.</p>
-                        <span class="schedule-age">4-12 lat</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="tuesday-schedule" class="schedule-content">
-                <div class="schedule-item">
-                    <div class="schedule-time">9:30 - 11:00</div>
-                    <div class="schedule-details">
-                        <h4>Angielski przez Zabawę</h4>
-                        <p>Nauka języka angielskiego poprzez gry interaktywne, piosenki i animacje VR.</p>
-                        <span class="schedule-age">3-7 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">11:30 - 13:00</div>
-                    <div class="schedule-details">
-                        <h4>Robotyka dla Dzieci</h4>
-                        <p>Budowanie i programowanie prostych robotów. Wprowadzenie do inżynierii i logicznego myślenia.</p>
-                        <span class="schedule-age">7-12 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">14:30 - 16:00</div>
-                    <div class="schedule-details">
-                        <h4>Gry Logiczne</h4>
-                        <p>Rozwiązywanie zagadek, labiryntów i ćwiczeń rozwijających inteligencję poprzez gry VR.</p>
-                        <span class="schedule-age">6-10 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">16:30 - 18:00</div>
-                    <div class="schedule-details">
-                        <h4>Taniec i Ruch</h4>
-                        <p>Zajęcia ruchowe z elementami tańca, koordynacji i rytmiki z wykorzystaniem sensorów ruchu.</p>
-                        <span class="schedule-age">3-8 lat</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="wednesday-schedule" class="schedule-content">
-                <div class="schedule-item">
-                    <div class="schedule-time">10:00 - 11:30</div>
-                    <div class="schedule-details">
-                        <h4>Nauka Przyrody VR</h4>
-                        <p>Wirtualne podróże po oceanach, lasach i kosmosie. Poznawanie świata przyrody w 3D.</p>
-                        <span class="schedule-age">5-9 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">12:00 - 13:30</div>
-                    <div class="schedule-details">
-                        <h4>Muzyka Cyfrowa</h4>
-                        <p>Tworzenie muzyki z wykorzystaniem aplikacji i instrumentów elektronicznych.</p>
-                        <span class="schedule-age">4-12 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">15:00 - 16:30</div>
-                    <div class="schedule-details">
-                        <h4>Sztuka Cyfrowa</h4>
-                        <p>Malowanie, rysowanie i animacje komputerowe z wykorzystaniem specjalistycznego oprogramowania.</p>
-                        <span class="schedule-age">6-12 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">17:00 - 18:30</div>
-                    <div class="schedule-details">
-                        <h4>Gry Drużynowe</h4>
-                        <p>Zajęcia rozwijające umiejętności społeczne i pracę zespołową poprzez gry wieloosobowe.</p>
-                        <span class="schedule-age">7-12 lat</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="thursday-schedule" class="schedule-content">
-                <div class="schedule-item">
-                    <div class="schedule-time">9:00 - 10:30</div>
-                    <div class="schedule-details">
-                        <h4>Warsztaty Kulinarne</h4>
-                        <p>Przygotowywanie prostych dań i poznawanie zdrowego odżywiania w zabawny sposób.</p>
-                        <span class="schedule-age">4-8 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">11:00 - 12:30</div>
-                    <div class="schedule-details">
-                        <h4>Przygody Historyczne</h4>
-                        <p>Podróże w czasie z wykorzystaniem technologii VR. Poznawanie historii Polski i świata.</p>
-                        <span class="schedule-age">8-12 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">14:00 - 15:30</div>
-                    <div class="schedule-details">
-                        <h4>Ekologia i Środowisko</h4>
-                        <p>Edukacja ekologiczna poprzez gry i eksperymenty interaktywne.</p>
-                        <span class="schedule-age">5-10 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">16:00 - 17:30</div>
-                    <div class="schedule-details">
-                        <h4>Yoga dla Dzieci</h4>
-                        <p>Relaksacja, koncentracja i ćwiczenia oddechowe dostosowane do potrzeb dzieci.</p>
-                        <span class="schedule-age">3-10 lat</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="friday-schedule" class="schedule-content">
-                <div class="schedule-item">
-                    <div class="schedule-time">10:00 - 11:30</div>
-                    <div class="schedule-details">
-                        <h4>Gry Przygodowe</h4>
-                        <p>Epic VR adventures - przygody w wirtualnym świecie z elementami fantasy.</p>
-                        <span class="schedule-age">6-12 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">12:00 - 13:30</div>
-                    <div class="schedule-details">
-                        <h4>Warsztaty Naukowe</h4>
-                        <p>Eksperymenty fizyczne i chemiczne w bezpieczny, interaktywny sposób.</p>
-                        <span class="schedule-age">7-12 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">15:00 - 16:30</div>
-                    <div class="schedule-details">
-                        <h4>Teatr i Improwizacja</h4>
-                        <p>Zajęcia rozwijające kreatywność i umiejętności aktorskie poprzez zabawy teatralne.</p>
-                        <span class="schedule-age">5-10 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">17:00 - 18:30</div>
-                    <div class="schedule-details">
-                        <h4>Gry Sportowe VR</h4>
-                        <p>Aktywność fizyczna w wirtualnej rzeczywistości - sporty i ćwiczenia dostosowane do dzieci.</p>
-                        <span class="schedule-age">6-12 lat</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="weekend-schedule" class="schedule-content">
-                <div class="schedule-item">
-                    <div class="schedule-time">10:00 - 12:00</div>
-                    <div class="schedule-details">
-                        <h4>Festiwal Gier Rodzinnych</h4>
-                        <p>Gry planszowe i VR dla całych rodzin. Wstęp dla rodziców bezpłatny!</p>
-                        <span class="schedule-age">Wszystkie grupy wiekowe</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">13:00 - 15:00</div>
-                    <div class="schedule-details">
-                        <h4>Strefa Wolnej Zabawy</h4>
-                        <p>Dostęp do wszystkich atrakcji bez harmonogramu - zabawa na własną rękę.</p>
-                        <span class="schedule-age">Wszystkie grupy wiekowe</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">15:30 - 17:00</div>
-                    <div class="schedule-details">
-                        <h4>Imprezy Specjalne</h4>
-                        <p>Tematyczne wydarzenia weekendowe - superbohaterowie, kosmos, dinozaury itp.</p>
-                        <span class="schedule-age">4-12 lat</span>
-                    </div>
-                </div>
-                
-                <div class="schedule-item">
-                    <div class="schedule-time">17:30 - 19:00</div>
-                    <div class="schedule-details">
-                        <h4>Warsztaty Specjalne</h4>
-                        <p>Specjalne warsztaty weekendowe - fotografia, film, muzyka elektroniczna.</p>
-                        <span class="schedule-age">6-12 lat</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="promotions" class="promotions">
-        <h3 class="animate-text">Aktualne Promocje</h3>
-        <div class="promotions-intro">
-            <p>Skorzystaj z naszych specjalnych ofert i rabatów</p>
-        </div>
-        
-        <div class="promotions-grid">
-            <div class="promotion-card featured">
-                <div class="promotion-badge">NAJLEPSZA OFERTA</div>
-                <div class="promotion-icon">
-                    <i class="fas fa-birthday-cake"></i>
-                </div>
-                <h4>Urodziny z Zniżką 20%</h4>
-                <p>Organizuj urodziny swojego dziecka w tygodniu i skorzystaj z 20% zniżki na pakiet urodzinowy!</p>
-                <div class="promotion-price">
-                    <span class="old-price">od 180 zł</span>
-                    <span class="new-price">od 144 zł</span>
-                </div>
-                <div class="promotion-validity">Ważne do 31.03.2024</div>
-                <button class="promotion-btn">Zarezerwuj teraz</button>
-            </div>
-            
-            <div class="promotion-card">
-                <div class="promotion-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h4>Pakiet Rodzinny</h4>
-                <p>Przyprowadź całą rodzinę! Drugie i każde kolejne dziecko płaci tylko 15 zł za godzinę.</p>
-                <div class="promotion-price">
-                    <span class="new-price">15 zł/osoba</span>
-                </div>
-                <div class="promotion-validity">Codziennie</div>
-                <button class="promotion-btn">Dowiedz się więcej</button>
-            </div>
-            
-            <div class="promotion-card">
-                <div class="promotion-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h4>Happy Hour</h4>
-                <p>W tygodniu między 14:00-16:00 godzina zabawy kosztuje tylko 20 zł!</p>
-                <div class="promotion-price">
-                    <span class="new-price">20 zł/godzina</span>
-                </div>
-                <div class="promotion-validity">Pon-Pt 14:00-16:00</div>
-                <button class="promotion-btn">Sprawdź godziny</button>
-            </div>
-            
-            <div class="promotion-card">
-                <div class="promotion-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>Karta Stałego Klienta</h4>
-                    <p>Zakup 10 wizyt i otrzymaj 11-tą gratis! Idealne dla regularnych gości.</p>
-                <div class="promotion-price">
-                    <span class="new-price">Zaoszczędź 25 zł</span>
-                </div>
-                <div class="promotion-validity">Bezterminowo</div>
-                <button class="promotion-btn">Kup kartę</button>
-            </div>
-            
-            <div class="promotion-card">
-                <div class="promotion-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h4>Studenci i Doktoranci</h4>
-                <p>Specjalna oferta dla studentów - 15% zniżki na wszystkie zajęcia i warsztaty.</p>
-                <div class="promotion-price">
-                    <span class="new-price">15% zniżki</span>
-                </div>
-                <div class="promotion-validity">Przy okazaniu legitymacji</div>
-                <button class="promotion-btn">Więcej info</button>
-            </div>
-            
-            <div class="promotion-card">
-                <div class="promotion-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h4>Dzień Matki i Ojca</h4>
-                <p>W specjalne dni poświęcone rodzicom - 25% zniżki na rodzinne wizyty.</p>
-                <div class="promotion-price">
-                    <span class="new-price">25% zniżki</span>
-                </div>
-                <div class="promotion-validity">26 maja, 23 czerwca</div>
-                <button class="promotion-btn">Zarezerwuj</button>
-            </div>
-        </div>
-        
-        <div class="coupon-section">
-            <h4>Kupony Rabatowe</h4>
-            <div class="coupons-grid">
-                <div class="coupon">
-                    <div class="coupon-code">WESOŁY10</div>
-                    <div class="coupon-desc">10% zniżki na pierwszą wizytę</div>
-                    <div class="coupon-valid">Ważny do 30.04.2024</div>
-                </div>
-                
-                <div class="coupon">
-                    <div class="coupon-code">RODZINA15</div>
-                    <div class="coupon-desc">15% na pakiet rodzinny</div>
-                    <div class="coupon-valid">Ważny do 15.05.2024</div>
-                </div>
-                
-                <div class="coupon">
-                    <div class="coupon-code">URODZINY20</div>
-                    <div class="coupon-desc">20% na organizację urodzin</div>
-                    <div class="coupon-valid">Ważny do 31.12.2024</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Services Section -->
     <section id="services" class="services">
-        <h3 class="animate-text">Usługi</h3>
-        <div class="services-container">
-            <div class="service">
-                <h4 class="animate-text">Zabawy Interaktywne</h4>
-                <p class="animate-text">Zaawansowane gry i aktywności z elementami VR i AR. Zanurz się w wirtualne światy, gdzie dzieci mogą eksplorować kosmos, budować miasta przyszłości i rozwiązywać zagadki w interaktywny sposób. Bezpieczne i stymulujące dla rozwoju motorycznego i poznawczego.</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Nasze Atrakcje</h2>
+                <p>Odkryj park trampolin i małpi gaj w hali</p>
             </div>
-            <div class="service">
-                <h4 class="animate-text">Strefa Edukacyjna</h4>
-                <p class="animate-text">Nauka przez zabawę z wykorzystaniem najnowszych technologii. Programy edukacyjne obejmujące matematykę, język, sztukę i naukę przyrody, wszystko w formie gier i eksperymentów. Przygotowujemy dzieci do przyszłości poprzez kreatywne myślenie i umiejętności cyfrowe.</p>
-            </div>
-            <div class="service">
-                <h4 class="animate-text">Imprezy Urodzinowe</h4>
-                <p class="animate-text">Niezapomniane urodziny w futurystycznym stylu. Spersonalizowane pakiety z tematami kosmicznymi, superbohaterami lub podróżami w czasie. Włączając dekoracje, animacje i prezenty – wszystko, aby urodziny były magiczne i niezapomniane dla Twojego dziecka.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Dzieci skaczące na trampolinach">
+                    </div>
+                    <div class="service-content">
+                        <h3>Park Trampolin</h3>
+                        <p>Największy park trampolin w Warszawie! Ogromne konstrukcje do zabaw akrobatycznych, foam pit, skakanka i strefy do skakania.</p>
+                        <div class="service-features">
+                            <span class="feature">500m² powierzchni</span>
+                            <span class="feature">Dla dzieci 3-15 lat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1544378730-6f3c834d9b2d?w=400&h=250&fit=crop" alt="Dzieci bawiące się w małpim gaju">
+                    </div>
+                    <div class="service-content">
+                        <h3>Małpi Gaj</h3>
+                        <p>Olbrzymi kompleks przeszkód, lin i platform do wspinania. Przygoda i zabawa dla małych małp w bezpiecznym środowisku!</p>
+                        <div class="service-features">
+                            <span class="feature">Dla dzieci 3-12 lat</span>
+                            <span class="feature">Strefa dmuchańców</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Pricing Section -->
     <section id="pricing" class="pricing">
-        <h3 class="animate-text">Cennik</h3>
-        <div class="pricing-plans">
-            <div class="plan">
-                <h4>GODZINA ZABAWY</h4>
-                <div class="price">25 zł</div>
-                <ul>
-                    <li>Dostęp do wszystkich atrakcji</li>
-                    <li>Opieka wykwalifikowanego personelu</li>
-                    <li>Napoje i przekąski</li>
-                    <li>Bezpieczne środowisko</li>
-                </ul>
-                <a href="#contact" class="btn">Zarezerwuj</a>
+        <div class="container">
+            <div class="section-header">
+                <h2>Cennik</h2>
+                <p>Wybierz pakiet idealny dla Twojej rodziny</p>
             </div>
-            <div class="plan featured">
-                <div class="popular-badge">Najczęściej wybierany</div>
-                <h4>PAKIET 3 GODZINY</h4>
-                <div class="price">65 zł</div>
-                <ul>
-                    <li>Wszystko z pakietu godzinnego</li>
-                    <li>Przerwa na posiłek</li>
-                    <li>Indywidualne podejście</li>
-                    <li>Zniżka 15%</li>
-                </ul>
-                <a href="#contact" class="btn">Zarezerwuj</a>
-            </div>
-            <div class="plan">
-                <h4>URODZINY</h4>
-                <div class="price">od 150 zł</div>
-                <ul>
-                    <li>3 godziny zabawy</li>
-                    <li>Dekoracje tematyczne</li>
-                    <li>Tort i napoje</li>
-                    <li>Animacja urodzinowa</li>
-                    <li>Zdjęcia na pamiątkę</li>
-                </ul>
-                <a href="#contact" class="btn">Zapytaj o ofertę</a>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Strefa Trampolin</h3>
+                        <div class="price">
+                            <span class="amount">25</span>
+                            <span class="period">zł/h</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Dostęp do strefy trampolin</li>
+                        <li><i class="fas fa-check"></i> Strefa dmuchańców</li>
+                        <li><i class="fas fa-check"></i> Nadzór instruktorów</li>
+                        <li><i class="fas fa-times"></i> Małpi gaj</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Wybierz</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Najpopularniejszy</div>
+                    <div class="pricing-header">
+                        <h3>Cała Hala</h3>
+                        <div class="price">
+                            <span class="amount">35</span>
+                            <span class="period">zł/h</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Wszystkie atrakcje</li>
+                        <li><i class="fas fa-check"></i> Park trampolin + małpi gaj</li>
+                        <li><i class="fas fa-check"></i> Strefa relaksu rodziców</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Wybierz</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Urodziny</h3>
+                        <div class="price">
+                            <span class="amount">150</span>
+                            <span class="period">zł/3h</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 3 godziny zabawy</li>
+                        <li><i class="fas fa-check"></i> Tort urodzinowy gratis</li>
+                        <li><i class="fas fa-check"></i> Wszystkie atrakcje</li>
+                        <li><i class="fas fa-check"></i> Animacja i dekoracje</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Zarezerwuj</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="gallery">
-        <h3 class="animate-text">Galeria</h3>
-        <div class="gallery-container">
-            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Dzieci bawiące się w sali zabaw z elementami VR">
-            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Interaktywne gry edukacyjne dla dzieci">
-            <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Strefa zabaw z technologią AR">
-            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Dzieci eksplorujące świat wirtualnej rzeczywistości">
-            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Zabawy zespołowe z wykorzystaniem technologii">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Strefa relaksu i kreatywności">
+    <!-- AI Chatbot Section -->
+    <section id="faq" class="ai-chatbot">
+        <div class="container">
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <h2>AI Asystent Wesołego Zakątka</h2>
+                    <p>Zadaj pytanie naszemu inteligentnemu asystentowi - odpowie natychmiastowo!</p>
+                </div>
+                <div class="chat-window">
+                    <div class="chat-messages">
+                        <!-- Messages will be added here dynamically -->
+                    </div>
+                    <div class="quick-questions">
+                        <h4>Szybkie pytania - kliknij aby zapytać:</h4>
+                        <div class="quick-buttons">
+                            <button class="quick-btn">Ile kosztuje wejście?</button>
+                            <button class="quick-btn">Jakie atrakcje są dostępne?</button>
+                            <button class="quick-btn">Czy potrzebna jest rezerwacja?</button>
+                            <button class="quick-btn">Jakie są godziny otwarcia?</button>
+                            <button class="quick-btn">Czy są zniżki dla grup?</button>
+                            <button class="quick-btn">Czy atrakcje są bezpieczne?</button>
+                            <button class="quick-btn">Gdzie jesteście położeni?</button>
+                            <button class="quick-btn">Czy można przynieść własne jedzenie?</button>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Zadaj pytanie AI asystentowi..." autocomplete="off">
+                        <button>
+                            <i class="fas fa-paper-plane"></i>
+                            Wyślij
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h3 class="animate-text">Formularz Kontaktowy</h3>
-        <div class="contact-container">
-            <div class="contact-info-section">
-                <h4>Znajdź nas</h4>
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <i class="fab fa-whatsapp"></i>
-                        <div class="contact-details">
-                            <strong>WhatsApp</strong>
-                            <a href="https://wa.me/48602191473" target="_blank" class="contact-link">
-                                +48 602 191 473
-                            </a>
-                            <p>Natychmiastowa odpowiedź</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Skontaktuj się z nami</h2>
+                <p>Umów wizytę lub zadaj pytanie</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Znajdź nas</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adres</strong>
+                                <p>ul. Przyszłości 42<br>Warszawa 00-001</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-phone"></i>
-                        <div class="contact-details">
-                            <strong>Telefon</strong>
-                            <a href="tel:+48602191473" class="contact-link">
-                                +48 602 191 473
-                            </a>
-                            <p>Pon-Pt: 9:00-18:00</p>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Telefon</strong>
+                                <a href="tel:+48602191473">+48 602 191 473</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <div class="contact-details">
-                            <strong>Email</strong>
-                            <a href="mailto:kontakt@wesolyzakatek.pl" class="contact-link">
-                                kontakt@wesolyzakatek.pl
-                            </a>
-                            <p>Odpowiedź w ciągu 24h</p>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/48602191473" target="_blank">+48 602 191 473</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="contact-details">
-                            <strong>Adres</strong>
-                            <p>Wesoły Zakątek<br>ul. Przykładna 123<br>00-001 Warszawa</p>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:kontakt@wesolyzakatek.pl">kontakt@wesolyzakatek.pl</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Godziny otwarcia</strong>
+                                <p>Pon-Pt: 9:00-18:00<br>Sob-Ndz: 10:00-20:00</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="contact-form-section">
-                <h4>Wyślij wiadomość</h4>
-                <form id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Imię i nazwisko</label>
-                            <input type="text" id="name" placeholder="Wpisz swoje imię i nazwisko" required>
+                <div class="contact-form">
+                    <h3>Wyślij wiadomość</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko</label>
+                                <input type="text" id="name" placeholder="Twoje imię i nazwisko" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Twój adres email" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Adres email</label>
-                            <input type="email" id="email" placeholder="Wpisz swój adres email" required>
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Wiadomość</label>
-                        <textarea id="message" placeholder="Wpisz swoją wiadomość" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Wyślij wiadomość</button>
-                </form>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+                            <button type="button" id="whatsappBtn" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Wyślij przez WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                </div>
-            </div>
-    </section>
-
-
-
+    <!-- Google Maps Section -->
     <section id="location" class="location">
-        <h3 class="animate-text">Znajdź Nas</h3>
-        <div class="location-content">
-            <div class="location-info">
-                <h4>Adres</h4>
-                <p><i class="fas fa-map-marker-alt"></i> ul. Przyszłości 42<br>00-001 Warszawa, Polska</p>
-                <h4>Kontakt</h4>
-                <p><i class="fas fa-phone"></i> +48 123 456 789</p>
-                <p><i class="fas fa-envelope"></i> kontakt@wesolyzakatek.pl</p>
-                <h4>Godziny otwarcia</h4>
-                <p><i class="fas fa-clock"></i> Pon-Pt: 9:00-18:00<br>Sob-Ndz: 10:00-20:00</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Znajdź nas na mapie</h2>
+                <p>Sprawdź lokalizację Wesołego Zakątka i znajdź najlepszą drogę dojazdu</p>
             </div>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.123456789012!2d21.012345678901234!3d52.2296756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3!2sWarszawa!5e0!3m2!1spl!2spl!4v1703123456789!5m2!1spl!2spl" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <div class="location-container">
+                <div class="map-container">
+                    <div id="googleMap" class="google-map"></div>
+                </div>
+                <div class="location-info">
+                    <div class="location-details">
+                        <h3>Wesoły Zakątek</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> ul. Przyszłości 42, Warszawa 00-001</p>
+                        <p><i class="fas fa-clock"></i> Pon-Pt: 9:00-18:00 | Sob-Ndz: 10:00-20:00</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+48602191473">+48 602 191 473</a></p>
+                        <div class="location-features">
+                            <div class="feature-item">
+                                <i class="fas fa-parking"></i>
+                                <span>Parking bezpłatny</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bus"></i>
+                                <span>Łatwy dojazd komunikacją</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-wheelchair"></i>
+                                <span>Dostępność dla niepełnosprawnych</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="directions-btn">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Wesoły+Zakątek+ul.+Przyszłości+42+Warszawa" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i> Wskazówki dojazdu
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Wesoły Zakątek</h4>
-                <p>Najnowocześniejsza sala zabaw dla dzieci. Dołącz do nas w świecie przyszłości zabawy!</p>
+    <!-- Floating Contact Buttons -->
+    <section id="comments" class="comments">
+        <div class="container">
+            <div class="section-header">
+                <h2>Opinie naszych klientów</h2>
+                <p>Przeczytaj recenzje rodziców i zobacz, co mówią o Wesołym Zakątku</p>
             </div>
-            <div class="footer-section">
-                <h4>Kontakt</h4>
-                <p>Email: info@wesolyzakatek.pl</p>
-                <p>Telefon: +48 123 456 789</p>
-                <p>Adres: ul. Przyszłości 1, Warszawa</p>
-            </div>
-            <div class="footer-section">
-                <h4>Śledź nas</h4>
-                <div class="social-media">
-                    <a href="https://facebook.com/wesolyzakatek" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/wesolyzakatek" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/wesolyzakatek" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://youtube.com/wesolyzakatek" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <div class="comments-container">
+                <div class="comments-tabs">
+                    <button class="tab-btn active" data-tab="google">Google Reviews</button>
+                    <button class="tab-btn" data-tab="facebook">Facebook</button>
+                </div>
+                <div class="tab-content">
+                    <div id="google-reviews" class="reviews-content active">
+                        <div class="reviews-header">
+                            <div class="rating-summary">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-text">
+                                    <span class="rating-number">4.8</span>
+                                    <span class="rating-count">(127 recenzji)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Anna Kowalska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">2 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Niesamowite miejsce! Moje dzieci w wieku 4 i 6 lat bawiły się przez 2 godziny bez chwili nudy. Park trampolin jest bezpieczny, a małpi gaj to istny raj dla małych małp. Personel bardzo pomocny i uśmiechnięty. Polecam wszystkim rodzicom!"</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Marek Nowak</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">3 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Organizowaliśmy tutaj urodziny dla naszego syna. Wszystko było perfekcyjne - tort gratis, dekoracje, 3 godziny zabawy. Dzieci były zachwycone parkiem trampolin. Cena bardzo rozsądna. Na pewno wrócimy!"</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Ewa Wiśniewska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">1 miesiąc temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Świetne miejsce dla rodzin! Rodzice mają gdzie usiąść z kawą, a dzieci mogą bezpiecznie się bawić. Wszystko jest czyste i zadbane. Instruktorzy pilnują bezpieczeństwa. Godziny otwarcia wygodne."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-footer">
+                            <a href="#" class="btn btn-secondary" target="_blank">
+                                <i class="fab fa-google"></i> Zobacz wszystkie recenzje na Google
+                            </a>
+                        </div>
+                    </div>
+                    <div id="facebook-reviews" class="reviews-content">
+                        <div class="reviews-header">
+                            <div class="rating-summary">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-text">
+                                    <span class="rating-number">4.7</span>
+                                    <span class="rating-count">(89 recenzji)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Katarzyna Jankowska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">1 tydzień temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Najlepsze miejsce na urodziny! Moja córka była w siódmym niebie. Park trampolin ogromny, małpi gaj super, a tort urodzinowy gratis to miły akcent. Personel bardzo zaangażowany."</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Tomasz Lewandowski</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">2 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Przychodzimy tutaj regularnie. Dzieci uwielbiają park trampolin, a my rodzice możemy spokojnie odpocząć w strefie relaksu. Czysto, bezpiecznie i wesoło. Polecam!"</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Monika Zielińska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">3 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Wspaniałe miejsce dla całej rodziny! Moje bliźniaki (4 lata) bawiły się przez półtorej godziny bez przerwy. Wszystko bezpieczne, czyste i super zorganizowane."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-footer">
+                            <a href="#" class="btn btn-secondary" target="_blank">
+                                <i class="fab fa-facebook-f"></i> Zobacz wszystkie recenzje na Facebook
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Wesoły Zakątek - Sala Zabaw dla Dzieci. Wszystkie prawa zastrzeżone.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galeria Zdjęć</h2>
+                <p>Podziel się swoimi wspomnieniami z Wesołego Zakątka</p>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-upload">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="upload-text">
+                            <h3>Przeciągnij zdjęcia tutaj</h3>
+                            <p>lub kliknij, aby wybrać pliki</p>
+                            <span class="upload-hint">Maksymalnie 10 zdjęć, każdy do 5MB</span>
+                        </div>
+                        <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                        <button class="btn btn-primary upload-btn" id="uploadBtn">
+                            <i class="fas fa-plus"></i> Wybierz zdjęcia
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Zdjęcia będą dodawane tutaj dynamicznie -->
+                </div>
+
+                <div class="gallery-modal" id="galleryModal">
+                    <div class="modal-content">
+                        <span class="modal-close" id="modalClose">&times;</span>
+                        <img class="modal-image" id="modalImage" src="" alt="">
+                        <div class="modal-info">
+                            <h3 id="modalTitle">Tytuł zdjęcia</h3>
+                            <p id="modalDescription">Opis zdjęcia</p>
+                        </div>
+                        <button class="modal-prev" id="modalPrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-next" id="modalNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wesoły Zakątek</h3>
+                    <p>Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa i dmuchańce w hali 1000m².</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Szybkie linki</h3>
+                    <ul>
+                        <li><a href="#home">Start</a></li>
+                        <li><a href="#about">O Nas</a></li>
+                        <li><a href="#services">Usługi</a></li>
+                        <li><a href="#pricing">Cennik</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#comments">Opinie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li><a href="tel:+48602191473">+48 602 191 473</a></li>
+                        <li><a href="mailto:kontakt@wesolyzakatek.pl">kontakt@wesolyzakatek.pl</a></li>
+                        <li>ul. Przyszłości 42, Warszawa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wesoły Zakątek. Wszystkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Karuzela komentarzy
-
-
-
-
-
-
-
-
-
-
-                    </div>
-                    </div>
-
-        // Mini-game functionality
-        let score = 0;
-        let timeLeft = 30;
-        let gameInterval;
-        let timeInterval;
-
-        const scoreDisplay = document.getElementById('score');
-        const timeDisplay = document.getElementById('time');
-        const startBtn = document.getElementById('startGame');
-        const resetBtn = document.getElementById('resetGame');
-        const stars = document.querySelectorAll('.star');
-
-        function startGame() {
-            score = 0;
-            timeLeft = 30;
-            scoreDisplay.textContent = score;
-            timeDisplay.textContent = timeLeft;
-            startBtn.disabled = true;
-            resetBtn.disabled = false;
-
-            // Start moving stars
-            gameInterval = setInterval(moveStars, 1000);
-            timeInterval = setInterval(updateTime, 1000);
-
-            stars.forEach(star => {
-                star.style.display = 'block';
-                star.addEventListener('click', collectStar);
-
-        function resetGame() {
-            clearInterval(gameInterval);
-            clearInterval(timeInterval);
-            score = 0;
-            timeLeft = 30;
-            scoreDisplay.textContent = score;
-            timeDisplay.textContent = timeLeft;
-            startBtn.disabled = false;
-            resetBtn.disabled = true;
-
-            stars.forEach(star => {
-                star.style.display = 'none';
-                star.style.left = Math.random() * 80 + '%';
-                star.style.top = Math.random() * 80 + '%';
-
-        function moveStars() {
-            stars.forEach(star => {
-                star.style.left = Math.random() * 80 + '%';
-                star.style.top = Math.random() * 80 + '%';
-
-        function collectStar() {
-            score += 10;
-            scoreDisplay.textContent = score;
-            this.style.display = 'none';
-            // Create explosion effect
-            const explosion = document.createElement('div');
-            explosion.className = 'explosion';
-            explosion.textContent = '+10';
-            explosion.style.left = this.style.left;
-            explosion.style.top = this.style.top;
-            document.getElementById('gameArea').appendChild(explosion);
-            setTimeout(() => explosion.remove(), 1000);
-
-        function updateTime() {
-            timeLeft--;
-            timeDisplay.textContent = timeLeft;
-            if (timeLeft <= 0) {
-                clearInterval(gameInterval);
-                clearInterval(timeInterval);
-                startBtn.disabled = false;
-                resetBtn.disabled = true;
-                alert(`Koniec gry! Twój wynik: ${score} punktów`);
-
-        startBtn.addEventListener('click', startGame);
-        resetBtn.addEventListener('click', resetGame);
-        resetBtn.disabled = true;
-
-        // Newsletter functionality
-        const newsletterForm = document.getElementById('newsletterForm');
-        const newsletterEmail = document.getElementById('newsletterEmail');
-
-        newsletterForm.addEventListener('submit', function(e) {
-            const email = newsletterEmail.value.trim();
-            
-            if (email) {
-                // Simulate newsletter signup
-                alert(`Dziękujemy za zapisanie się do newslettera!\nEmail: ${email}\nBędziesz otrzymywać najnowsze informacje o Wesołym Zakątku.`);
-                newsletterEmail.value = '';
-                
-                // Add to localStorage for demo
-                let subscribers = JSON.parse(localStorage.getItem('newsletterSubscribers') || '[]');
-                if (!subscribers.includes(email)) {
-                    subscribers.push(email);
-                    localStorage.setItem('newsletterSubscribers', JSON.stringify(subscribers));
-                }
-    </script>
-
-    <!-- Cookie Banner -->
-    <div id="cookieBanner" class="cookie-banner">
-        <div class="cookie-content">
-            <p>Ta strona używa plików cookie, aby zapewnić najlepszą jakość przeglądania. Kontynuując, wyrażasz zgodę na ich używanie.</p>
-            <div class="cookie-buttons">
-                <button id="acceptCookies" class="cookie-btn accept">Akceptuj</button>
-                <button id="declineCookies" class="cookie-btn decline">Odrzuć</button>
-                <a href="#privacy" class="cookie-link">Więcej informacji</a>
-            </div>
-        </div>
+    <!-- Floating Contact Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+48602191473" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/48602191473" target="_blank" class="floating-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
-    <script>
-        // Cookie Banner functionality
-        const cookieBanner = document.getElementById('cookieBanner');
-        const acceptBtn = document.getElementById('acceptCookies');
-        const declineBtn = document.getElementById('declineCookies');
-
-        // Check if cookies are already accepted
-        if (!localStorage.getItem('cookiesAccepted')) {
-            cookieBanner.style.display = 'block';
-
-        acceptBtn.addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookieBanner.style.display = 'none';
-
-        declineBtn.addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'false');
-            cookieBanner.style.display = 'none';
-
-        // Mobile menu functionality
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.className = 'fas fa-times';
-            } else {
-                icon.className = 'fas fa-bars';
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.querySelector('i').className = 'fas fa-bars';
-
-        // Close mobile menu when clicking on a link
-        navMenu.addEventListener('click', function(event) {
-            if (event.target.tagName === 'A') {
-                navMenu.classList.remove('active');
-                menuToggle.querySelector('i').className = 'fas fa-bars';
-
-        // Register Service Worker for PWA
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('Service Worker registered:', registration);
-                    })
-                    .catch(error => {
-                        console.log('Service Worker registration failed:', error);
-                    });
-
-        // AI Chat functionality
-        const aiChatMessages = document.getElementById('aiChatMessages');
-        const aiChatInput = document.getElementById('aiChatInput');
-        const aiChatSend = document.getElementById('aiChatSend');
-        const aiQuickBtns = document.querySelectorAll('.ai-quick-btn');
-
-        // Baza odpowiedzi AI
-        const aiResponses = {
-            "wiek": "Nasza sala zabaw jest przeznaczona dla dzieci w wieku od 2 do 12 lat. Dla młodszych dzieci oferujemy specjalną strefę z łagodniejszymi atrakcjami, które są bezpieczne i dostosowane do ich potrzeb.",
-            "rezerwacja": "Tak, zalecamy wcześniejszą rezerwację, szczególnie w weekendy i święta. Można to zrobić telefonicznie pod numerem +48 123 456 789 lub przez formularz kontaktowy na naszej stronie. Rezerwacja gwarantuje miejsce i pozwala nam lepiej przygotować się do wizyty.",
-            "bezpieczeństwo": "Stosujemy najwyższe standardy bezpieczeństwa: monitoring 24/7, wykwalifikowany personel z certyfikatami pierwszej pomocy, bezpieczne urządzenia certyfikowane, regularne kontrole techniczne i specjalne procedury bezpieczeństwa dla dzieci.",
-            "jedzenie": "Tak, w naszej sali dostępne są zdrowe przekąski, napoje i posiłki dla dzieci. Oferujemy opcje dla dzieci z alergiami pokarmowymi, posiłki wegetariańskie i dania bez glutenu. Wszystko przygotowywane ze świeżych, naturalnych składników.",
-            "technologie": "Oferujemy najnowocześniejsze technologie VR i AR: gogle VR Oculus Quest, interaktywne stoły AR, sensory ruchu, aplikacje edukacyjne i gry dostosowane do wieku dzieci. Wszystko jest bezpieczne i stymuluje rozwój poznawczy.",
-            "urodziny": "Tak, specjalizujemy się w organizacji urodzin z tematami futurystycznymi! Oferujemy dekoracje kosmiczne, animacje VR, spersonalizowane pakiety, torty tematyczne i wiele atrakcji. Ceny zaczynają się od 150 zł.",
-            "cennik": "Oferujemy kilka pakietów: Godzina zabawy - 25 zł, Pakiet 3 godziny - 65 zł (zniżka 15%), Urodziny - od 150 zł. Wszystkie ceny zawierają dostęp do wszystkich atrakcji, opiekę personelu i napoje.",
-            "godziny": "Jesteśmy otwarci: Poniedziałek-Piątek 9:00-18:00, Sobota-Niedziela 10:00-20:00. W święta i wakacje godziny mogą ulec zmianie.",
-            "kontakt": "Można się z nami skontaktować telefonicznie: +48 123 456 789, przez email: kontakt@wesolyzakatek.pl lub przez formularz na stronie. Jesteśmy w Warszawie przy ul. Przyszłości 42.",
-            "lokalizacja": "Znajdujemy się w Warszawie przy ul. Przyszłości 42, 00-001 Warszawa. Łatwo dojechać komunikacją miejską, parking dostępny.",
-            "opłaty": "Wszystkie opłaty są transparentne. Cena zawiera wstęp na wszystkie atrakcje, opiekę personelu, napoje i przekąski. Nie ma ukrytych kosztów.",
-            "zniżki": "Oferujemy zniżki dla rodzin wielodzietnych, stałych klientów i w pakietach wielogodzinnych. Szczegóły dostępne przy rezerwacji.",
-            "specjalne": "Tak, mamy specjalne programy dla dzieci z różnymi potrzebami. Nasz personel jest przeszkolony do pracy z dziećmi o specjalnych potrzebach edukacyjnych.",
-            "edukacja": "Łączymy zabawę z edukacją. Nasze gry VR i AR uczą matematyki, języka, kreatywności i pracy zespołowej. Programy dostosowane do wieku dziecka.",
-            "personel": "Nasz zespół składa się z wykwalifikowanych pedagogów, animatorów i specjalistów ds. bezpieczeństwa. Wszyscy posiadają odpowiednie certyfikaty i doświadczenie w pracy z dziećmi.",
-            "covid": "Przestrzegamy wszystkich wytycznych sanitarnych. Regularnie dezynfekujemy powierzchnie, zapewniamy środki higieny i utrzymujemy bezpieczny dystans społeczny.",
-            "alergie": "Jesteśmy przygotowani na dzieci z alergiami. Oferujemy posiłki bez glutenu, laktozy, orzechów i innych alergenów. Prosimy o wcześniejsze poinformowanie o alergiach.",
-            "transport": "Organizujemy transport dla grup zorganizowanych. Dla indywidualnych klientów parking jest dostępny bezpłatnie.",
-            "grupy": "Organizujemy zajęcia dla grup szkolnych, przedszkolnych i zorganizowanych. Specjalne programy edukacyjne i rabaty grupowe.",
-            "default": "Dziękuję za pytanie! Jeśli nie znalazłeś odpowiedzi na swoje pytanie, skontaktuj się z nami telefonicznie pod numerem +48 123 456 789 lub przez formularz kontaktowy. Chętnie odpowiemy na wszystkie pytania dotyczące Wesołego Zakątka! 😊"
-        };
-
-        function addMessage(content, isUser = false) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `ai-message ${isUser ? 'ai-user-message' : ''}`;
-
-            const avatarDiv = document.createElement('div');
-            avatarDiv.className = 'ai-avatar';
-            avatarDiv.innerHTML = `<i class="fas ${isUser ? 'fa-user' : 'fa-robot'}"></i>`;
-
-            const contentDiv = document.createElement('div');
-            contentDiv.className = 'ai-message-content';
-            contentDiv.innerHTML = `<p>${content}</p>`;
-
-            messageDiv.appendChild(avatarDiv);
-            messageDiv.appendChild(contentDiv);
-            aiChatMessages.appendChild(messageDiv);
-
-            // Auto-scroll to bottom
-            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-
-        function getAIResponse(question) {
-            const lowerQuestion = question.toLowerCase();
-
-            // Sprawdź słowa kluczowe w pytaniu
-            for (const [key, response] of Object.entries(aiResponses)) {
-                if (key !== 'default' && lowerQuestion.includes(key)) {
-                    return response;
-                }
-
-            return aiResponses.default;
-
-        function sendMessage() {
-            const message = aiChatInput.value.trim();
-            if (!message) return;
-
-            // Dodaj wiadomość użytkownika
-            addMessage(message, true);
-            aiChatInput.value = '';
-
-            // Wyłącz przycisk wysyłania na chwilę
-            aiChatSend.disabled = true;
-            aiChatSend.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-
-            // Symuluj czas odpowiedzi AI (1-2 sekundy)
-            setTimeout(() => {
-                const response = getAIResponse(message);
-                addMessage(response);
-
-                // Włącz przycisk z powrotem
-                aiChatSend.disabled = false;
-                aiChatSend.innerHTML = '<i class="fas fa-paper-plane"></i>';
-            }, Math.random() * 1000 + 1000);
-
-        // Event listeners
-        aiChatSend.addEventListener('click', sendMessage);
-
-        aiChatInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' && !aiChatSend.disabled) {
-                sendMessage();
-
-        // Quick question buttons
-        aiQuickBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const question = this.dataset.question;
-                aiChatInput.value = question;
-                sendMessage();
-            });
-        });
-
-        const reviewTabs = document.querySelectorAll('.review-tab');
-        const reviewContents = document.querySelectorAll('.reviews-content');
-
-        reviewTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remove active class from all tabs
-                reviewTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // Hide all review contents
-                reviewContents.forEach(content => content.classList.remove('active'));
-                // Show selected review content
-                const tabId = this.dataset.tab;
-                document.getElementById(tabId + '-reviews').classList.add('active');
-
-        // Schedule days functionality
-        const scheduleDays = document.querySelectorAll('.schedule-day');
-        const scheduleContents = document.querySelectorAll('.schedule-content');
-
-        scheduleDays.forEach(day => {
-            day.addEventListener('click', function() {
-                // Remove active class from all days
-                scheduleDays.forEach(d => d.classList.remove('active'));
-                // Add active class to clicked day
-                this.classList.add('active');
-                
-                // Hide all schedule contents
-                scheduleContents.forEach(content => content.classList.remove('active'));
-                // Show selected schedule content
-                const dayId = this.dataset.day;
-                document.getElementById(dayId + '-schedule').classList.add('active');
-            });
-        });
-
-        // Przycisk dymka AI
-        const aiBubble = document.getElementById('aiBubble');
-        aiBubble.addEventListener('click', function() {
-            document.getElementById('faq').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-
-        // Przycisk dymka WhatsApp
-        const whatsappBubble = document.getElementById('whatsappBubble');
-        whatsappBubble.addEventListener('click', function() {
-            window.open('https://wa.me/48512345678?text=Cześć! Chciałbym zapytać o ofertę Wesołego Zakątka.', '_blank');
-        });
-
-        // Przycisk dymka kontaktu
-        const contactBubble = document.getElementById('contactBubble');
-        contactBubble.addEventListener('click', function() {
-            document.getElementById('contact').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-
-    </script>
-
-    <section id="faq" class="faq">
-        <h3 class="animate-text">Asystent AI - Zadaj Pytanie</h3>
-        <div class="ai-chat-container">
-            <div class="ai-chat-window" id="aiChatWindow">
-                <div class="ai-chat-messages" id="aiChatMessages">
-                    <div class="ai-message ai-welcome">
-                        <div class="ai-avatar">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="ai-message-content">
-                            <p>Cześć! Jestem AI asystentem Wesołego Zakątka. Zadaj mi dowolne pytanie dotyczące naszej sali zabaw, usług, cen lub bezpieczeństwa. Postaram się pomóc! 🤖</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ai-chat-input-container">
-                    <div class="ai-quick-questions">
-                        <button class="ai-quick-btn" data-question="Jaki jest wiek dzieci, które mogą korzystać z atrakcji?">Wiek dzieci</button>
-                        <button class="ai-quick-btn" data-question="Czy dzieci są pod stałym nadzorem?">Nadzór nad dziećmi</button>
-                        <button class="ai-quick-btn" data-question="Jakie technologie VR i AR są dostępne?">Technologie VR/AR</button>
-                        <button class="ai-quick-btn" data-question="Czy oferujecie posiłki dla dzieci?">Posiłki dla dzieci</button>
-                        <button class="ai-quick-btn" data-question="Jak można zarezerwować wizytę?">Rezerwacja wizyty</button>
-                        <button class="ai-quick-btn" data-question="Czy organizujecie urodziny?">Organizacja urodzin</button>
-                        <button class="ai-quick-btn" data-question="Jakie są godziny otwarcia?">Godziny otwarcia</button>
-                        <button class="ai-quick-btn" data-question="Czy dzieci muszą mieć własne urządzenia?">Własne urządzenia</button>
-                        <button class="ai-quick-btn" data-question="Co w przypadku alergii lub specjalnych potrzeb?">Alergie i potrzeby specjalne</button>
-                        <button class="ai-quick-btn" data-question="Czy oferujecie karty stałego klienta?">Karty stałego klienta</button>
-                    </div>
-                    <div class="ai-chat-input-wrapper">
-                        <input type="text" id="aiChatInput" placeholder="Zadaj pytanie...">
-                        <button id="aiSendBtn"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Przycisk dymka AI -->
-    <div class="ai-bubble" id="aiBubble">
-        <i class="fas fa-robot"></i>
-    </div>
-
-    <!-- Przycisk dymka WhatsApp -->
-    <div class="whatsapp-bubble" id="whatsappBubble">
-        <i class="fab fa-whatsapp"></i>
-    </div>
-
-    <!-- Przycisk dymka kontaktu -->
-    <div class="contact-bubble" id="contactBubble">
-        <i class="fas fa-comments"></i>
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
