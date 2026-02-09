@@ -143,7 +143,16 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
 if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
+    // Use touchstart for better mobile support
+    navToggle.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+    
+    // Also keep click for desktop
+    navToggle.addEventListener('click', (e) => {
+        e.preventDefault();
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
     });
@@ -154,14 +163,17 @@ const moreLink = document.querySelector('.more-link');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 
 if (moreLink && dropdownMenu) {
-    moreLink.addEventListener('click', (e) => {
+    // Use touchstart for mobile, click for desktop
+    const eventType = 'ontouchstart' in window ? 'touchstart' : 'click';
+    
+    moreLink.addEventListener(eventType, (e) => {
         e.preventDefault();
         moreLink.classList.toggle('active');
         dropdownMenu.classList.toggle('active');
     });
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
+    document.addEventListener(eventType, (e) => {
         if (!moreLink.contains(e.target) && !dropdownMenu.contains(e.target)) {
             moreLink.classList.remove('active');
             dropdownMenu.classList.remove('active');
