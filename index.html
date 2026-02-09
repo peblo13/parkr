@@ -193,6 +193,10 @@
                         </div>
                     </div>
                 </div>
+                <button class="theme-toggle" aria-label="Przełącz tryb ciemny" title="Przełącz tryb ciemny">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
                 <div class="nav-toggle" aria-label="Przełącz menu nawigacyjne" role="button" tabindex="0">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -213,7 +217,7 @@
                     Największy park trampolin w Warszawie z olbrzymim małpim gajem! Strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla całej rodziny
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Umów Wizytę</a>
+                    <button class="btn btn-primary" onclick="openBookingModal()" aria-describedby="booking-help">Zarezerwuj Online</button>
                     <a href="#services" class="btn btn-secondary">Zobacz Usługi</a>
                 </div>
             </div>
@@ -425,6 +429,30 @@
                 <h2>Skontaktuj się z nami</h2>
                 <p>Umów wizytę lub zadaj pytanie</p>
             </div>
+            
+            <!-- Newsletter Signup -->
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h3>Zapisz się do newslettera</h3>
+                        <p>Otrzymuj informacje o promocjach, nowych atrakcjach i specjalnych ofertach!</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="newsletter-input-group">
+                            <input type="email" id="newsletterEmail" placeholder="Twój adres email" required aria-describedby="newsletter-help">
+                            <button type="submit" class="btn btn-primary" aria-describedby="newsletter-submit-help">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                <span>Zapisz się</span>
+                            </button>
+                        </div>
+                        <div class="newsletter-consent">
+                            <input type="checkbox" id="newsletterConsent" required>
+                            <label for="newsletterConsent">Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z polityką prywatności.</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Znajdź nas</h3>
@@ -851,6 +879,90 @@
         gtag('js', new Date());
         gtag('config', 'GA_MEASUREMENT_ID');
     </script>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal" role="dialog" aria-labelledby="booking-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="booking-title">Zarezerwuj wizytę</h2>
+                <button class="modal-close" onclick="closeBookingModal()" aria-label="Zamknij modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingName">Imię i nazwisko *</label>
+                            <input type="text" id="bookingName" required aria-describedby="booking-name-help">
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingEmail">Email *</label>
+                            <input type="email" id="bookingEmail" required aria-describedby="booking-email-help">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingPhone">Telefon *</label>
+                            <input type="tel" id="bookingPhone" required aria-describedby="booking-phone-help">
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingDate">Data wizyty *</label>
+                            <input type="date" id="bookingDate" required min="<?php echo date('Y-m-d'); ?>" aria-describedby="booking-date-help">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingTime">Godzina *</label>
+                            <select id="bookingTime" required aria-describedby="booking-time-help">
+                                <option value="">Wybierz godzinę</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingGuests">Liczba osób *</label>
+                            <select id="bookingGuests" required aria-describedby="booking-guests-help">
+                                <option value="">Wybierz liczbę</option>
+                                <option value="1">1 osoba</option>
+                                <option value="2">2 osoby</option>
+                                <option value="3">3 osoby</option>
+                                <option value="4">4 osoby</option>
+                                <option value="5">5 osób</option>
+                                <option value="6+">6+ osób</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookingMessage">Dodatkowe informacje</label>
+                        <textarea id="bookingMessage" rows="3" placeholder="Informacje o alergiach, specjalnych potrzebach itp." aria-describedby="booking-message-help"></textarea>
+                    </div>
+                    
+                    <div class="booking-consent">
+                        <input type="checkbox" id="bookingConsent" required>
+                        <label for="bookingConsent">Akceptuję regulamin i politykę prywatności. Wyrażam zgodę na przetwarzanie danych osobowych.</label>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="btn btn-secondary" onclick="closeBookingModal()">Anuluj</button>
+                        <button type="submit" class="btn btn-primary">Zarezerwuj</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

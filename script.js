@@ -187,6 +187,31 @@ if (moreLink && dropdownMenu) {
     });
 }
 
+// Theme toggle functionality
+const themeToggle = document.querySelector('.theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'theme_change', {
+                'theme': newTheme
+            });
+        }
+    });
+}
+
 // Header background on scroll
 const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
@@ -250,6 +275,171 @@ if (contactForm) {
 
         // Reset form
         contactForm.reset();
+    });
+}
+
+// Newsletter form handling
+const newsletterForm = document.getElementById('newsletterForm');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById('newsletterEmail').value;
+        const consent = document.getElementById('newsletterConsent').checked;
+
+        // Validation
+        if (!email) {
+            alert('Proszę podać adres email.');
+            return;
+        }
+
+        if (!consent) {
+            alert('Proszę wyrazić zgodę na przetwarzanie danych osobowych.');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Proszę podać prawidłowy adres email.');
+            return;
+        }
+
+        // Here you would typically send the email to your newsletter service
+        // For now, we'll store it locally and show success message
+        const subscribers = JSON.parse(localStorage.getItem('newsletterSubscribers') || '[]');
+        
+        if (subscribers.includes(email)) {
+            alert('Ten adres email jest już zapisany do newslettera.');
+            return;
+        }
+
+        subscribers.push(email);
+        localStorage.setItem('newsletterSubscribers', JSON.stringify(subscribers));
+
+        alert('Dziękujemy za zapisanie się do newslettera! Będziesz otrzymywać informacje o naszych promocjach.');
+
+        // Reset form
+        newsletterForm.reset();
+
+        // Track event in Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'newsletter_signup', {
+                'method': 'website_form'
+            });
+        }
+    });
+}
+
+// Booking modal functions
+function openBookingModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    
+    // Focus management
+    const firstInput = document.getElementById('bookingName');
+    if (firstInput) firstInput.focus();
+    
+    // Track event
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'booking_modal_open', {
+            'source': 'hero_button'
+        });
+    }
+}
+
+function closeBookingModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeBookingModal();
+    }
+});
+
+// Close modal on outside click
+document.getElementById('bookingModal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'bookingModal') {
+        closeBookingModal();
+    }
+});
+
+// Booking form handling
+const bookingForm = document.getElementById('bookingForm');
+if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = {
+            name: document.getElementById('bookingName').value,
+            email: document.getElementById('bookingEmail').value,
+            phone: document.getElementById('bookingPhone').value,
+            date: document.getElementById('bookingDate').value,
+            time: document.getElementById('bookingTime').value,
+            guests: document.getElementById('bookingGuests').value,
+            message: document.getElementById('bookingMessage').value,
+            consent: document.getElementById('bookingConsent').checked,
+            timestamp: new Date().toISOString()
+        };
+
+        // Validation
+        const requiredFields = ['name', 'email', 'phone', 'date', 'time', 'guests'];
+        for (const field of requiredFields) {
+            if (!formData[field]) {
+                alert(`Proszę wypełnić pole: ${field === 'name' ? 'Imię i nazwisko' : 
+                                             field === 'email' ? 'Email' :
+                                             field === 'phone' ? 'Telefon' :
+                                             field === 'date' ? 'Data' :
+                                             field === 'time' ? 'Godzina' :
+                                             'Liczba osób'}`);
+                return;
+            }
+        }
+
+        if (!formData.consent) {
+            alert('Proszę wyrazić zgodę na przetwarzanie danych osobowych.');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            alert('Proszę podać prawidłowy adres email.');
+            return;
+        }
+
+        // Phone validation (basic)
+        const phoneRegex = /^[\+]?[0-9\s\-\(\)]{9,}$/;
+        if (!phoneRegex.test(formData.phone)) {
+            alert('Proszę podać prawidłowy numer telefonu.');
+            return;
+        }
+
+        // Store booking locally (in production, send to server)
+        const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
+        bookings.push(formData);
+        localStorage.setItem('bookings', JSON.stringify(bookings));
+
+        alert(`Dziękujemy za rezerwację, ${formData.name}! Potwierdzenie wysłaliśmy na adres ${formData.email}. Skontaktujemy się wkrótce.`);
+
+        // Reset form and close modal
+        bookingForm.reset();
+        closeBookingModal();
+
+        // Track conversion
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'booking_complete', {
+                'date': formData.date,
+                'guests': formData.guests
+            });
+        }
     });
 }
 
