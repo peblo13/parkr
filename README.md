@@ -24,6 +24,16 @@ Nowoczesna, responsywna strona internetowa dla największego parku trampolin w W
 - **Galeria zdjęć** z lightbox'em i uploadem
 - **System recenzji** - Google Reviews i Facebook Reviews
 - **Formularz kontaktowy** z walidacją
+- **System rezerwacji online** - modal z formularzem rezerwacji
+- **Newsletter signup** - zapis do newslettera z walidacją
+- **Dark Mode Toggle** - przełączanie między trybem jasnym i ciemnym
+
+### 📱 Dostępność (Accessibility)
+- **ARIA labels** i role dla czytników ekranowych
+- **Keyboard navigation** - pełna obsługa klawiatury
+- **Semantic HTML** - poprawne znaczniki semantyczne
+- **Focus management** - widoczne wskaźniki fokusu
+- **Modal dialogs** - dostępne okna modalne z focus trapping
 
 ### 📱 Dostępność (Accessibility)
 - **ARIA labels** i role dla czytników ekranowych
@@ -105,18 +115,26 @@ wesoly-zakatek/
 
 ## 🎯 Roadmap
 
+### ✅ Wersja 1.1 - Zaimplementowane
+- [x] Dark Mode Toggle z localStorage
+- [x] Newsletter signup z walidacją
+- [x] System rezerwacji online z modal
+- [x] Poprawiona dostępność (ARIA labels)
+- [x] Google Analytics tracking
+
 ### Wersja 2.0
-- [ ] System rezerwacji online
-- [ ] Panel administratora
-- [ ] Wielojęzyczność (i18n)
-- [ ] Dark mode toggle
-- [ ] Push notifications
+- [ ] System rezerwacji z kalendarzem dostępności
+- [ ] Panel administratora dla zarządzania rezerwacjami
+- [ ] Integracja z systemem płatności online
+- [ ] Live chat zamiast AI chatbota
+- [ ] Zaawansowana analityka użytkowników
 
 ### Wersja 1.5
-- [ ] Integracja z systemem płatności
-- [ ] Newsletter signup
-- [ ] Live chat zamiast AI chatbota
-- [ ] Zaawansowana analityka
+- [ ] Wielojęzyczność (i18n) - angielska wersja
+- [ ] Push notifications dla przeglądarki
+- [ ] Integracja z social media
+- [ ] System lojalnościowy
+- [ ] Mobile app (PWA)
 
 ## 📞 Kontakt
 - **Email:** kontakt@wesoly-zakatek.pl
