@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesoły Zakątek - Park Trampolin i Małpi Gaj Warszawa</title>
+    <meta name="description" content="Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla dzieci.">
+    <meta name="keywords" content="park trampolin, małpi gaj, dzieci, Warszawa, trampoliny, wspinaczka, dmuchańce, urodziny, zabawa">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-container">
+            <div class="loader-logo">
+                <img src="logopz.png" alt="Wesoły Zakątek" class="loader-logo-img">
+            </div>
+            <div class="loader-content">
+                <div class="loader-circle">
+                    <svg class="progress-ring" width="120" height="120">
+                        <circle class="progress-ring-circle-bg" stroke="#333" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"/>
+                        <circle class="progress-ring-circle" stroke="url(#gradient)" stroke-width="4" fill="transparent" r="52" cx="60" cy="60"
+                                style="stroke-dasharray: 327; stroke-dashoffset: 327;"/>
+                    </svg>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8a2be2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </div>
+                <div class="loader-text">
+                    <div class="loader-percentage">0%</div>
+                    <div class="loader-status">Ładowanie...</div>
+                </div>
+            </div>
+            <div class="loader-particles">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+                <div class="particle particle-7"></div>
+                <div class="particle particle-8"></div>
+                <div class="particle particle-9"></div>
+                <div class="particle particle-10"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>
+                        <img src="logopz.png" alt="Logo Wesoły Zakątek" class="logo-img">
+                        Wesoły Zakątek
+                    </h1>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Start</span>
+                    </a>
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>O Nas</span>
+                    </a>
+                    <a href="#services" class="nav-link">
+                        <i class="fas fa-concierge-bell"></i>
+                        <span>Usługi</span>
+                    </a>
+                    <a href="#pricing" class="nav-link">
+                        <i class="fas fa-tags"></i>
+                        <span>Cennik</span>
+                    </a>
+                    <a href="#gallery" class="nav-link">
+                        <i class="fas fa-images"></i>
+                        <span>Galeria</span>
+                    </a>
+                    <a href="#location" class="nav-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lokalizacja</span>
+                    </a>
+                    <a href="#faq" class="nav-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span>FAQ</span>
+                    </a>
+                    <a href="#comments" class="nav-link">
+                        <i class="fas fa-comments"></i>
+                        <span>Opinie</span>
+                    </a>
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Kontakt</span>
+                    </a>
+                    <div class="nav-more">
+                        <a href="#" class="nav-link more-link">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <span>Więcej</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#gallery" class="dropdown-item">
+                                <i class="fas fa-images"></i>
+                                <span>Galeria</span>
+                            </a>
+                            <a href="#location" class="dropdown-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Lokalizacja</span>
+                            </a>
+                            <a href="#faq" class="dropdown-item">
+                                <i class="fas fa-question-circle"></i>
+                                <span>FAQ</span>
+                            </a>
+                            <a href="#comments" class="dropdown-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Opinie</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Wesoły Zakątek - <span class="highlight">Park Trampolin</span> i Małpi Gaj
+                </h1>
+                <p class="hero-subtitle">
+                    Największy park trampolin w Warszawie z olbrzymim małpim gajem! Strefa wspinaczkowa, dmuchańce i niezapomniana zabawa dla całej rodziny
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Umów Wizytę</a>
+                    <a href="#services" class="btn btn-secondary">Zobacz Usługi</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-container">
+                    <img src="parkr.png" alt="Dzieci bawiące się na trampolinach w parku rozrywki">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">2000+</div>
+                <div class="stat-label">Zadowolonych Dzieci</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1000</div>
+                <div class="stat-label">m² Powierzchni</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Bezpieczeństwo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dlaczego Wesoły Zakątek?</h2>
+                <p>Największy park trampolin i małpi gaj w hali w Warszawie</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-bounce"></i>
+                    </div>
+                    <h3>Park Trampolin 500m²</h3>
+                    <p>Ogromny park trampolin z konstrukcjami do zabaw akrobatycznych, foam pit i strefami do skakania dla dzieci w każdym wieku.</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Małpi Gaj</h3>
+                    <p>Olbrzymi kompleks przeszkód, lin i platform do wspinania. Przygoda i zabawa dla małych małp w bezpiecznym środowisku.</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Urodziny dla Dzieci</h3>
+                    <p>Organizujemy niezapomniane urodziny z tortem gratis i pakietami urodzinowymi w parku trampolin.</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Rodzice na Pierwszym Miejscu</h3>
+                    <p>Oferujemy wygodne strefy relaksu dla rodziców z kawą, Wi-Fi i monitoringiem na żywo parku trampolin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nasze Atrakcje</h2>
+                <p>Odkryj park trampolin i małpi gaj w hali</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Dzieci skaczące na trampolinach">
+                    </div>
+                    <div class="service-content">
+                        <h3>Park Trampolin</h3>
+                        <p>Największy park trampolin w Warszawie! Ogromne konstrukcje do zabaw akrobatycznych, foam pit, skakanka i strefy do skakania.</p>
+                        <div class="service-features">
+                            <span class="feature">500m² powierzchni</span>
+                            <span class="feature">Dla dzieci 3-15 lat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1544378730-6f3c834d9b2d?w=400&h=250&fit=crop" alt="Dzieci bawiące się w małpim gaju">
+                    </div>
+                    <div class="service-content">
+                        <h3>Małpi Gaj</h3>
+                        <p>Olbrzymi kompleks przeszkód, lin i platform do wspinania. Przygoda i zabawa dla małych małp w bezpiecznym środowisku!</p>
+                        <div class="service-features">
+                            <span class="feature">Dla dzieci 3-12 lat</span>
+                            <span class="feature">Strefa dmuchańców</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cennik</h2>
+                <p>Wybierz pakiet idealny dla Twojej rodziny</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Strefa Trampolin</h3>
+                        <div class="price">
+                            <span class="amount">25</span>
+                            <span class="period">zł/h</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Dostęp do strefy trampolin</li>
+                        <li><i class="fas fa-check"></i> Strefa dmuchańców</li>
+                        <li><i class="fas fa-check"></i> Nadzór instruktorów</li>
+                        <li><i class="fas fa-times"></i> Małpi gaj</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Wybierz</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Najpopularniejszy</div>
+                    <div class="pricing-header">
+                        <h3>Cała Hala</h3>
+                        <div class="price">
+                            <span class="amount">35</span>
+                            <span class="period">zł/h</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Wszystkie atrakcje</li>
+                        <li><i class="fas fa-check"></i> Park trampolin + małpi gaj</li>
+                        <li><i class="fas fa-check"></i> Strefa relaksu rodziców</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Wybierz</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Urodziny</h3>
+                        <div class="price">
+                            <span class="amount">150</span>
+                            <span class="period">zł/3h</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 3 godziny zabawy</li>
+                        <li><i class="fas fa-check"></i> Tort urodzinowy gratis</li>
+                        <li><i class="fas fa-check"></i> Wszystkie atrakcje</li>
+                        <li><i class="fas fa-check"></i> Animacja i dekoracje</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Zarezerwuj</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot Section -->
+    <section id="faq" class="ai-chatbot">
+        <div class="container">
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <h2>AI Asystent Wesołego Zakątka</h2>
+                    <p>Zadaj pytanie naszemu inteligentnemu asystentowi - odpowie natychmiastowo!</p>
+                </div>
+                <div class="chat-window">
+                    <div class="chat-messages">
+                        <!-- Messages will be added here dynamically -->
+                    </div>
+                    <div class="quick-questions">
+                        <h4>Szybkie pytania - kliknij aby zapytać:</h4>
+                        <div class="quick-buttons">
+                            <button class="quick-btn">Ile kosztuje wejście?</button>
+                            <button class="quick-btn">Jakie atrakcje są dostępne?</button>
+                            <button class="quick-btn">Czy potrzebna jest rezerwacja?</button>
+                            <button class="quick-btn">Jakie są godziny otwarcia?</button>
+                            <button class="quick-btn">Czy są zniżki dla grup?</button>
+                            <button class="quick-btn">Czy atrakcje są bezpieczne?</button>
+                            <button class="quick-btn">Gdzie jesteście położeni?</button>
+                            <button class="quick-btn">Czy można przynieść własne jedzenie?</button>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Zadaj pytanie AI asystentowi..." autocomplete="off">
+                        <button>
+                            <i class="fas fa-paper-plane"></i>
+                            Wyślij
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skontaktuj się z nami</h2>
+                <p>Umów wizytę lub zadaj pytanie</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Znajdź nas</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adres</strong>
+                                <p>ul. Przyszłości 42<br>Warszawa 00-001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Telefon</strong>
+                                <a href="tel:+48602191473">+48 602 191 473</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/48602191473" target="_blank">+48 602 191 473</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:kontakt@wesolyzakatek.pl">kontakt@wesolyzakatek.pl</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Godziny otwarcia</strong>
+                                <p>Pon-Pt: 9:00-18:00<br>Sob-Ndz: 10:00-20:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Wyślij wiadomość</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko</label>
+                                <input type="text" id="name" placeholder="Twoje imię i nazwisko" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Twój adres email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+                            <button type="button" id="whatsappBtn" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Wyślij przez WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Znajdź nas na mapie</h2>
+                <p>Sprawdź lokalizację Wesołego Zakątka i znajdź najlepszą drogę dojazdu</p>
+            </div>
+            <div class="location-container">
+                <div class="map-container">
+                    <div id="googleMap" class="google-map"></div>
+                </div>
+                <div class="location-info">
+                    <div class="location-details">
+                        <h3>Wesoły Zakątek</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> ul. Przyszłości 42, Warszawa 00-001</p>
+                        <p><i class="fas fa-clock"></i> Pon-Pt: 9:00-18:00 | Sob-Ndz: 10:00-20:00</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+48602191473">+48 602 191 473</a></p>
+                        <div class="location-features">
+                            <div class="feature-item">
+                                <i class="fas fa-parking"></i>
+                                <span>Parking bezpłatny</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-bus"></i>
+                                <span>Łatwy dojazd komunikacją</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-wheelchair"></i>
+                                <span>Dostępność dla niepełnosprawnych</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="directions-btn">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Wesoły+Zakątek+ul.+Przyszłości+42+Warszawa" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i> Wskazówki dojazdu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Buttons -->
+    <section id="comments" class="comments">
+        <div class="container">
+            <div class="section-header">
+                <h2>Opinie naszych klientów</h2>
+                <p>Przeczytaj recenzje rodziców i zobacz, co mówią o Wesołym Zakątku</p>
+            </div>
+            <div class="comments-container">
+                <div class="comments-tabs">
+                    <button class="tab-btn active" data-tab="google">Google Reviews</button>
+                    <button class="tab-btn" data-tab="facebook">Facebook</button>
+                </div>
+                <div class="tab-content">
+                    <div id="google-reviews" class="reviews-content active">
+                        <div class="reviews-header">
+                            <div class="rating-summary">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-text">
+                                    <span class="rating-number">4.8</span>
+                                    <span class="rating-count">(127 recenzji)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Anna Kowalska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">2 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Niesamowite miejsce! Moje dzieci w wieku 4 i 6 lat bawiły się przez 2 godziny bez chwili nudy. Park trampolin jest bezpieczny, a małpi gaj to istny raj dla małych małp. Personel bardzo pomocny i uśmiechnięty. Polecam wszystkim rodzicom!"</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Marek Nowak</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">3 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Organizowaliśmy tutaj urodziny dla naszego syna. Wszystko było perfekcyjne - tort gratis, dekoracje, 3 godziny zabawy. Dzieci były zachwycone parkiem trampolin. Cena bardzo rozsądna. Na pewno wrócimy!"</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Ewa Wiśniewska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">1 miesiąc temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Świetne miejsce dla rodzin! Rodzice mają gdzie usiąść z kawą, a dzieci mogą bezpiecznie się bawić. Wszystko jest czyste i zadbane. Instruktorzy pilnują bezpieczeństwa. Godziny otwarcia wygodne."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-footer">
+                            <a href="#" class="btn btn-secondary" target="_blank">
+                                <i class="fab fa-google"></i> Zobacz wszystkie recenzje na Google
+                            </a>
+                        </div>
+                    </div>
+                    <div id="facebook-reviews" class="reviews-content">
+                        <div class="reviews-header">
+                            <div class="rating-summary">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-text">
+                                    <span class="rating-number">4.7</span>
+                                    <span class="rating-count">(89 recenzji)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Katarzyna Jankowska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">1 tydzień temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Najlepsze miejsce na urodziny! Moja córka była w siódmym niebie. Park trampolin ogromny, małpi gaj super, a tort urodzinowy gratis to miły akcent. Personel bardzo zaangażowany."</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Tomasz Lewandowski</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">2 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Przychodzimy tutaj regularnie. Dzieci uwielbiają park trampolin, a my rodzice możemy spokojnie odpocząć w strefie relaksu. Czysto, bezpiecznie i wesoło. Polecam!"</p>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="reviewer-details">
+                                            <h4>Monika Zielińska</h4>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">3 tygodnie temu</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Wspaniałe miejsce dla całej rodziny! Moje bliźniaki (4 lata) bawiły się przez półtorej godziny bez przerwy. Wszystko bezpieczne, czyste i super zorganizowane."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-footer">
+                            <a href="#" class="btn btn-secondary" target="_blank">
+                                <i class="fab fa-facebook-f"></i> Zobacz wszystkie recenzje na Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galeria Zdjęć</h2>
+                <p>Podziel się swoimi wspomnieniami z Wesołego Zakątka</p>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-upload">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="upload-text">
+                            <h3>Przeciągnij zdjęcia tutaj</h3>
+                            <p>lub kliknij, aby wybrać pliki</p>
+                            <span class="upload-hint">Maksymalnie 10 zdjęć, każdy do 5MB</span>
+                        </div>
+                        <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                        <button class="btn btn-primary upload-btn" id="uploadBtn">
+                            <i class="fas fa-plus"></i> Wybierz zdjęcia
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Zdjęcia będą dodawane tutaj dynamicznie -->
+                </div>
+
+                <div class="gallery-modal" id="galleryModal">
+                    <div class="modal-content">
+                        <span class="modal-close" id="modalClose">&times;</span>
+                        <img class="modal-image" id="modalImage" src="" alt="">
+                        <div class="modal-info">
+                            <h3 id="modalTitle">Tytuł zdjęcia</h3>
+                            <p id="modalDescription">Opis zdjęcia</p>
+                        </div>
+                        <button class="modal-prev" id="modalPrev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-next" id="modalNext">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wesoły Zakątek</h3>
+                    <p>Największy park trampolin w Warszawie z olbrzymim małpim gajem! 500m² trampolin, strefa wspinaczkowa i dmuchańce w hali 1000m².</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Szybkie linki</h3>
+                    <ul>
+                        <li><a href="#home">Start</a></li>
+                        <li><a href="#about">O Nas</a></li>
+                        <li><a href="#services">Usługi</a></li>
+                        <li><a href="#pricing">Cennik</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#comments">Opinie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li><a href="tel:+48602191473">+48 602 191 473</a></li>
+                        <li><a href="mailto:kontakt@wesolyzakatek.pl">kontakt@wesolyzakatek.pl</a></li>
+                        <li>ul. Przyszłości 42, Warszawa</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wesoły Zakątek. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+48602191473" class="floating-btn phone-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/48602191473" target="_blank" class="floating-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
