@@ -912,10 +912,12 @@ body::after {
     border-radius: 8px;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 2;
+    z-index: 1001;
     min-width: 44px;
     min-height: 44px;
     justify-content: center;
+    background: rgba(255, 0, 0, 0.5); /* Temporary debug background */
+    border: 2px solid red; /* Temporary debug border */
 }
 
 .nav-toggle:hover {
@@ -1016,6 +1018,7 @@ body::after {
     }
 
     .nav-menu.active {
+        display: flex;
         height: auto;
         padding: 2rem 0;
         animation: menuSlideIn 0.4s ease-out;
